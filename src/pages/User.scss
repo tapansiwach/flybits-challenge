@@ -1,5 +1,22 @@
+@import '../styles/variables.scss';
+
 .user {
-  h1 {
-    color: coral;
-  }
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $extra-light;
+
+    input {
+      padding: 0.5em;
+      margin-bottom: 1em;
+      background-color: $light;
+      border: none;
+    }
+
+    .offer {
+      background-color: $light;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
 }
