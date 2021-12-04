@@ -1,5 +1,32 @@
+@import '../styles/variables.scss';
+
 .marketer {
-  h1 {
-    color: aquamarine;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+
+  &__sidenav {
+    width: 250px;
+    background-color: $medium;
+    padding: 16px;
+
+    ul {
+      margin-top: 16px;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  &__mainContent {
+    flex: auto;
+    background-color: $light;
+    padding: 16px;
+
+    .map {
+      height: 100%;
+      width: 100%;
+      background-color: $extra-light;
+    }
   }
 }
