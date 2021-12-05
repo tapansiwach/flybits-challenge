@@ -37,6 +37,11 @@ function User() {
     }
   }, [userLat, userLng])
 
+  const setUserLocation = (latitude, longitude) => {
+    setUserLat(latitude);
+    setUserLng(longitude);
+  }
+
   return (
     <div className="user">
       <label htmlFor="latitude">Latitude</label>
@@ -55,6 +60,7 @@ function User() {
           loadingElement={<div style={{ height: "100%" }} />}
           containerElement={<div style={{ height: "100%" }} />}
           mapElement={<div style={{ height: "100%" }} />}
+          setUserLocation={setUserLocation}
         />
       </div>
       {offers?.map(offer => (

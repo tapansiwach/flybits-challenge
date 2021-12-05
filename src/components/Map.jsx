@@ -47,7 +47,7 @@ function MarketerGoogleMap() {
   )
 }
 
-function UserGoogleMap() {
+function UserGoogleMap(props) {
   return (
     <GoogleMap
       defaultZoom={10}
@@ -55,6 +55,7 @@ function UserGoogleMap() {
       onClick={(e) => {
         console.log(`lat`, e.latLng.lat());
         console.log(`lng`, e.latLng.lng());
+        props.setUserLocation(e.latLng.lat(), e.latLng.lng());
       }}
     >
     </GoogleMap>
