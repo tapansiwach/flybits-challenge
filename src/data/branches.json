@@ -1,79 +1,81 @@
-[
-  {
-    "bank": "TD Canada Trust",
-    "branchAddress": "1200 St. Laurent Blvd",
-    "id": "",
-    "lat": "45.42217",
-    "lng": "-75.63686"
-  },
-  {
-    "bank": "Bank of Canada",
-    "branchAddress": "234 Wellington St. W",
-    "id": "",
-    "lat": "45.42434",
-    "lng": "-75.70209"
-  },
-  {
-    "bank": "National Bank",
-    "branchAddress": "780 Baseline Rd",
-    "id": "",
-    "lat": "45.37685",
-    "lng": "-75.71548"
-  },
-  {
-    "bank": "BMO Bank of Montreal",
-    "branchAddress": "1465 Richimond Rd",
-    "id": "",
-    "lat": "45.36817",
-    "lng": "-75.79204"
-  },
-  {
-    "bank": "RBC Royal Bank",
-    "branchAddress": "2121 Carling Ave",
-    "id": "",
-    "lat": "45.377806",
-    "lng": "-75.77007"
-  },
-  {
-    "bank": "RBC Royal Bank",
-    "branchAddress": "745 Bank St",
-    "id": "",
-    "lat": "45.40897",
-    "lng": "-75.68665"
-  },
-  {
-    "bank": "Scotiabank",
-    "branchAddress": "Patterson Hall, 1125 Colonel By Dr",
-    "id": "",
-    "lat": "45.38457",
-    "lng": "-75.60719"
-  },
-  {
-    "bank": "RBC Royal Bank",
-    "branchAddress": "1145 Wellington St. W",
-    "id": "",
-    "lat": "45.40482",
-    "lng": "-75.72578"
-  },
-  {
-    "bank": "RBC Royal Bank",
-    "branchAddress": "99 Bank St",
-    "id": "",
-    "lat": "45.42603",
-    "lng": "-75.69797"
-  },
-  {
-    "bank": "National Bank",
-    "branchAddress": "232 Rideau St",
-    "id": "",
-    "lat": "45.43350",
-    "lng": "-75.68664"
-  },
-  {
-    "bank": "HSBC",
-    "branchAddress": "131 Queen St",
-    "id": "",
-    "lat": "45.42434",
-    "lng": "-75.69865"
-  }
-]
+{
+  "branches": [
+    {
+      "bank": "TD Canada Trust",
+      "branchAddress": "1200 St. Laurent Blvd",
+      "id": "",
+      "lat": 45.42217,
+      "lng": -75.63686
+    },
+    {
+      "bank": "Bank of Canada",
+      "branchAddress": "234 Wellington St. W",
+      "id": "",
+      "lat": 45.42434,
+      "lng": -75.70209
+    },
+    {
+      "bank": "National Bank",
+      "branchAddress": "780 Baseline Rd",
+      "id": "",
+      "lat": 45.37685,
+      "lng": -75.71548
+    },
+    {
+      "bank": "BMO Bank of Montreal",
+      "branchAddress": "1465 Richimond Rd",
+      "id": "",
+      "lat": 45.36817,
+      "lng": -75.79204
+    },
+    {
+      "bank": "RBC Royal Bank",
+      "branchAddress": "2121 Carling Ave",
+      "id": "",
+      "lat": 45.377806,
+      "lng": -75.77007
+    },
+    {
+      "bank": "RBC Royal Bank",
+      "branchAddress": "745 Bank St",
+      "id": "",
+      "lat": 45.40897,
+      "lng": -75.68665
+    },
+    {
+      "bank": "Scotiabank",
+      "branchAddress": "Patterson Hall, 1125 Colonel By Dr",
+      "id": "",
+      "lat": 45.38457,
+      "lng": -75.60719
+    },
+    {
+      "bank": "RBC Royal Bank",
+      "branchAddress": "1145 Wellington St. W",
+      "id": "",
+      "lat": 45.40482,
+      "lng": -75.72578
+    },
+    {
+      "bank": "RBC Royal Bank",
+      "branchAddress": "99 Bank St",
+      "id": "",
+      "lat": 45.42603,
+      "lng": -75.69797
+    },
+    {
+      "bank": "National Bank",
+      "branchAddress": "232 Rideau St",
+      "id": "",
+      "lat": 45.43350,
+      "lng": -75.68664
+    },
+    {
+      "bank": "HSBC",
+      "branchAddress": "131 Queen St",
+      "id": "",
+      "lat": 45.42434,
+      "lng": -75.69865
+    }
+  ]
+}
