@@ -1,16 +1,19 @@
 import React from 'react'
 import './Marketer.scss'
 import Map from '../components/Map';
+import * as branchData from "../data/branches.json";
 
 function Marketer() {
   return (
     <div className="marketer">
       <div className="marketer__sidenav">
-        Side Nav
         <ul>
-          <li>Branch Name 1</li>
-          <li>Branch Name 2</li>
-          <li>Branch Name 3</li>
+          {branchData.branches.map((branch) => (
+            <li>
+              <p>{branch.bank}</p>
+              <p>{branch.branchAddress}</p>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="marketer__mainContent">

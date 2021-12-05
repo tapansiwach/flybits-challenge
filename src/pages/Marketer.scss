@@ -12,9 +12,24 @@
     padding: 16px;
 
     ul {
-      margin-top: 16px;
+      margin-top: 0;
       padding: 0;
       list-style: none;
+
+      li {
+        margin: 0 0 0.5em;
+        padding: 0.25em;
+        background-color: $dark;
+        color: white;
+
+        p {
+          margin: 1px;
+        }
+
+        p:last-of-type {
+          font-size: 0.7em;
+        }
+      }
     }
   }
 
