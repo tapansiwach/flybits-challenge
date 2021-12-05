@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import './User.scss'
 import * as branchData from "../data/branches.json";
 import Map from '../components/Map';
+import proximate from '../helpers/proximate';
 
 function User() {
   const [offers, setOffers] = useState([]);
-  const [lat, setLat] = useState(null);
-  const [lng, setLng] = useState(null);
+  const [userLat, setUserLat] = useState(null);
+  const [userLng, setUserLng] = useState(null);
 
   const getAllOffers = () => {
     const allOffers = branchData.branches
@@ -20,24 +21,30 @@ function User() {
   }, []);
 
   useEffect(() => {
-    console.log(`lat`, lat);
-    console.log(`lng`, lng);
-    if (lat && lng) {
-      // call a helper function to check proximity from a branch with promotion
+    console.log(`userLat`, userLat);
+    console.log(`userLng`, userLng);
+    if (userLat && userLng) {
+      for (const branch of branchData.branches) {
+        proximate(
+          { lat: branch.lat, lng: branch.lng },
+          { lat: userLat, lng: userLng },
+          branch.circle.radius
+        );
+      }
     }
-  }, [lat, lng])
+  }, [userLat, userLng])
 
   return (
     <div className="user">
       <label htmlFor="latitude">Latitude</label>
       <input type="text" name="latitude" id="latitude"
-        value={lat}
-        onChange={e => setLat(e.target.value)}
+        value={userLat}
+        onChange={e => setUserLat(e.target.value)}
       />
       <label htmlFor="longitude">Longitude</label>
       <input type="text" name="longitude" id="longitude"
-        value={lng}
-        onChange={e => setLng(e.target.value)}
+        value={userLng}
+        onChange={e => setUserLng(e.target.value)}
       />
       <div className="map">
         <Map
