@@ -1,6 +1,6 @@
 import React from 'react'
 import './Marketer.scss'
-import Map from '../components/Map';
+import { MarketerMap } from '../components/Map';
 import * as branchData from "../data/branches.json";
 
 function Marketer() {
@@ -18,7 +18,7 @@ function Marketer() {
       </div>
       <div className="marketer__mainContent">
         <div className="map">
-          <Map
+          <MarketerMap
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_MAP_API}`}
             loadingElement={<div style={{ height: "100%" }} />}
             containerElement={<div style={{ height: "100%" }} />}

@@ -9,7 +9,7 @@ import {
 } from 'react-google-maps';
 import * as branchData from "../data/branches.json";
 
-function GMap() {
+function MarketerGoogleMap() {
   const [selectedBranch, setSelectedBranch] = useState(null);
   return (
     <GoogleMap
@@ -47,6 +47,8 @@ function GMap() {
   )
 }
 
-const Map = withScriptjs(withGoogleMap(GMap));
+const MarketerMap = withScriptjs(withGoogleMap(MarketerGoogleMap));
 
-export default Map
+export {
+  MarketerMap,
+}
