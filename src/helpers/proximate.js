@@ -10,7 +10,6 @@
 //    return np.round(res, 2)
 
 function distance(lat1, lon1, lat2, lon2) {
-  console.log(`{lat1, lon1, lat2, lon2}`, { lat1, lon1, lat2, lon2 });
   const R = 6371071.0; // Radius of the Earth in meters
   const phi1 = lat1 * (Math.PI / 180);
   const phi2 = lat2 * (Math.PI / 180);
@@ -27,9 +26,7 @@ const proximate = (branchPosition, userPosition, offerZoneRadius) => {
   const lat2 = userPosition.lat;
   const lon2 = userPosition.lng;
   const proximity = distance(lat1, lon1, lat2, lon2);
-  console.log(`proximity`, proximity);
   const proximate = proximity < offerZoneRadius ? true : false;
-  console.log(`proximate`, proximate);
   return proximate;
 }
 

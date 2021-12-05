@@ -21,16 +21,19 @@ function User() {
   }, []);
 
   useEffect(() => {
-    console.log(`userLat`, userLat);
-    console.log(`userLng`, userLng);
     if (userLat && userLng) {
+      const relevantOffers = [];
       for (const branch of branchData.branches) {
-        proximate(
+        const nearby = proximate(
           { lat: branch.lat, lng: branch.lng },
           { lat: userLat, lng: userLng },
           branch.circle.radius
         );
+        if (nearby) {
+          relevantOffers.push(...branch.offers);
+        }
       }
+      setOffers(relevantOffers);
     }
   }, [userLat, userLng])
 
