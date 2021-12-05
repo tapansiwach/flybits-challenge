@@ -5,6 +5,7 @@ import {
   withGoogleMap,
   Marker,
   InfoWindow,
+  Circle,
 } from 'react-google-maps';
 import * as branchData from "../data/branches.json";
 
@@ -14,6 +15,10 @@ function GMap() {
     <GoogleMap
       defaultZoom={10}
       defaultCenter={{ lat: 45.421532, lng: -75.697189 }}
+      onClick={(e) => {
+        console.log(`lat`, e.latLng.lat());
+        console.log(`lng`, e.latLng.lng());
+      }}
     >
       {branchData.branches.map((branch) => (
         <Marker
@@ -31,6 +36,13 @@ function GMap() {
           <div>Branch Info</div>
         </InfoWindow>
       )}
+      {branchData.branches.map((branch) => (
+        <Circle
+          defaultCenter={{ lat: branch.lat, lng: branch.lng }}
+          radius={branch.circle.radius}
+          options={branch.circle.options}
+        />
+      ))}
     </GoogleMap>
   )
 }

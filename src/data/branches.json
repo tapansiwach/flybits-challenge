@@ -5,77 +5,165 @@
       "branchAddress": "1200 St. Laurent Blvd",
       "id": "",
       "lat": 45.42217,
-      "lng": -75.63686
+      "lng": -75.63686,
+      "circle": {
+        "radius": 1000,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     },
     {
       "bank": "Bank of Canada",
       "branchAddress": "234 Wellington St. W",
       "id": "",
       "lat": 45.42434,
-      "lng": -75.70209
+      "lng": -75.70209,
+      "circle": {
+        "radius": 3000,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     },
     {
       "bank": "National Bank",
       "branchAddress": "780 Baseline Rd",
       "id": "",
       "lat": 45.37685,
-      "lng": -75.71548
+      "lng": -75.71548,
+      "circle": {
+        "radius": 500,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     },
     {
       "bank": "BMO Bank of Montreal",
       "branchAddress": "1465 Richimond Rd",
       "id": "",
       "lat": 45.36817,
-      "lng": -75.79204
+      "lng": -75.79204,
+      "circle": {
+        "radius": 2000,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     },
     {
       "bank": "RBC Royal Bank",
       "branchAddress": "2121 Carling Ave",
       "id": "",
       "lat": 45.377806,
-      "lng": -75.77007
+      "lng": -75.77007,
+      "circle": {
+        "radius": 2500,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     },
     {
       "bank": "RBC Royal Bank",
       "branchAddress": "745 Bank St",
       "id": "",
       "lat": 45.40897,
-      "lng": -75.68665
+      "lng": -75.68665,
+      "circle": {
+        "radius": 200,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     },
     {
       "bank": "Scotiabank",
       "branchAddress": "Patterson Hall, 1125 Colonel By Dr",
       "id": "",
       "lat": 45.38457,
-      "lng": -75.60719
+      "lng": -75.60719,
+      "circle": {
+        "radius": 1800,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     },
     {
       "bank": "RBC Royal Bank",
       "branchAddress": "1145 Wellington St. W",
       "id": "",
       "lat": 45.40482,
-      "lng": -75.72578
+      "lng": -75.72578,
+      "circle": {
+        "radius": 5000,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     },
     {
       "bank": "RBC Royal Bank",
       "branchAddress": "99 Bank St",
       "id": "",
       "lat": 45.42603,
-      "lng": -75.69797
+      "lng": -75.69797,
+      "circle": {
+        "radius": 1200,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     },
     {
       "bank": "National Bank",
       "branchAddress": "232 Rideau St",
       "id": "",
       "lat": 45.43350,
-      "lng": -75.68664
+      "lng": -75.68664,
+      "circle": {
+        "radius": 700,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     },
     {
       "bank": "HSBC",
       "branchAddress": "131 Queen St",
       "id": "",
       "lat": 45.42434,
-      "lng": -75.69865
+      "lng": -75.69865,
+      "circle": {
+        "radius": 90,
+        "options": {
+          "strokeColor": "#ff0000",
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.35
+        }
+      }
     }
   ]
 }
