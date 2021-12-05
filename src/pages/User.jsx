@@ -1,5 +1,6 @@
 import React from 'react'
 import './User.scss'
+import * as branchData from "../data/branches.json";
 
 function User() {
   const imagesPath = process.env.PUBLIC_URL + "assets/images/";
@@ -9,14 +10,12 @@ function User() {
       <input type="text" name="latitude" id="latitude" />
       <label htmlFor="longitude">Longitude</label>
       <input type="text" name="longitude" id="longitude" />
-      <div className="offer">
-        <img src={`${imagesPath}money.jpg`} alt="" width="400px" />
-        <p>Offer Caption</p>
-      </div>
-      <div className="offer">
-        <img src={`${imagesPath}money.jpg`} alt="" width="400px" />
-        <p>Offer Caption</p>
-      </div>
+      {branchData.branches.map((branch) => (
+        <div className="offer">
+          <img src={branch.offers[0].imgSrc} alt="promotional offer" width="400px" />
+          <p>{branch.offers[0].caption}</p>
+        </div>
+      ))}
     </div>
   )
 }
