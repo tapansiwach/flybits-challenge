@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   GoogleMap,
   withScriptjs,
@@ -8,9 +8,22 @@ import {
   Circle,
 } from 'react-google-maps';
 import * as branchData from "../data/branches.json";
+import { getOffers } from '../firebase/db';
 
 function MarketerGoogleMap() {
   const [selectedBranch, setSelectedBranch] = useState(null);
+  const [offers, setOffers] = useState([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      const allOffers = await getOffers()
+      setOffers(allOffers);
+    }
+    loadData();
+  }, []);
+
+  console.log(`offers`, offers);
+
   return (
     <GoogleMap
       defaultZoom={10}
