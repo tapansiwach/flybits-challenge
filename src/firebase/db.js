@@ -3,8 +3,6 @@ import {
   collection,
   query,
   getDocs,
-  where,
-  onSnapshot,
 } from "firebase/firestore";
 
 
@@ -19,6 +17,12 @@ const getOffers = async () => {
   return offers;
 }
 
+const addOffer = async (data) => {
+  console.log(`data`, data);
+  // add this data to a document in db
+}
+
 export {
   getOffers,
+  addOffer,
 }
