@@ -1,17 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Marketer.scss'
 import { MarketerMap } from '../components/Map';
-import * as branchData from "../data/branches.json";
+// import * as branchData from "../data/branches.json";
+import { getOffers } from '../firebase/db';
 
 function Marketer() {
+  const [offers, setOffers] = useState([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      const allOffers = await getOffers()
+      setOffers(allOffers);
+    }
+    loadData();
+  }, []);
+
   return (
     <div className="marketer">
       <div className="marketer__sidenav">
         <ul>
-          {branchData.branches.map((branch, index) => (
+          {offers.map((offer, index) => (
             <li key={index}>
-              <p>{branch.bank}</p>
-              <p>{branch.branchAddress}</p>
+              <p>{offer.bank}</p>
+              <p>{offer.address}</p>
             </li>
           ))}
         </ul>

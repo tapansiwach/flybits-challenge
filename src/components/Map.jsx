@@ -7,11 +7,11 @@ import {
   InfoWindow,
   Circle,
 } from 'react-google-maps';
-import * as branchData from "../data/branches.json";
+// import * as branchData from "../data/branches.json";
 import { getOffers } from '../firebase/db';
 
 function MarketerGoogleMap() {
-  const [selectedBranch, setSelectedBranch] = useState(null);
+  // const [selectedBranch, setSelectedBranch] = useState(null);
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
@@ -33,14 +33,14 @@ function MarketerGoogleMap() {
         console.log(`lng`, e.latLng.lng());
       }}
     >
-      {branchData.branches.map((branch, index) => (
+      {offers?.map((offer, index) => (
         <Marker
           key={index}
-          position={{ lat: branch.lat, lng: branch.lng }}
-          onClick={() => setSelectedBranch(branch)}
+          position={{ lat: offer.lat, lng: offer.lng }}
+        // onClick={() => setSelectedBranch(branch)}
         />
       ))}
-      {selectedBranch && (
+      {/* {selectedBranch && (
         <InfoWindow
           zIndex={1}
           position={{ lat: selectedBranch.lat, lng: selectedBranch.lng }}
@@ -48,13 +48,17 @@ function MarketerGoogleMap() {
         >
           <div>Branch Info</div>
         </InfoWindow>
-      )}
-      {branchData.branches.map((branch, index) => (
+      )} */}
+      {offers?.map((offer, index) => (
         <Circle
           key={index}
-          defaultCenter={{ lat: branch.lat, lng: branch.lng }}
-          radius={branch.circle.radius}
-          options={branch.circle.options}
+          defaultCenter={{ lat: offer.lat, lng: offer.lng }}
+          radius={offer.radius}
+          options={{
+            strokeColor: "#ff0000",
+            fillColor: "#ff0000",
+            fillOpacity: 0.35
+          }}
         />
       ))}
     </GoogleMap>
