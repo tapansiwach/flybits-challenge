@@ -3,6 +3,7 @@ import {
   collection,
   query,
   getDocs,
+  addDoc,
 } from "firebase/firestore";
 
 
@@ -19,7 +20,13 @@ const getOffers = async () => {
 
 const addOffer = async (data) => {
   console.log(`data`, data);
-  // add this data to a document in db
+  try {
+    // Add a new document with a generated id.
+    const docRef = await addDoc(collection(db, "offers"), data);
+    console.log("Document written with ID: ", docRef.id);
+  } catch (error) {
+    console.log(`error`, error.message);
+  }
 }
 
 export {

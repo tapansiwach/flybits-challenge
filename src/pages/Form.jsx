@@ -11,19 +11,27 @@ export default function Form() {
   const imgSrcRef = useRef();
   const captionRef = useRef();
 
-  const onSubmit = e => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    // validate data
     const data = {
       bank: bankRef.current.value,
       address: addressRef.current.value,
-      lat: latRef.current.value,
-      lng: lngRef.current.value,
-      radius: radiusRef.current.value,
+      lat: Number(latRef.current.value),
+      lng: Number(lngRef.current.value),
+      radius: Number(radiusRef.current.value),
       imgSrc: imgSrcRef.current.value,
       caption: captionRef.current.value
     }
-    addOffer(data);
+    // validate data, then...
+    await addOffer(data);
+
+    bankRef.current.value = "";
+    addressRef.current.value = "";
+    latRef.current.value = "";
+    lngRef.current.value = "";
+    radiusRef.current.value = "";
+    imgSrcRef.current.value = "";
+    captionRef.current.value = "";
   }
 
   return (
