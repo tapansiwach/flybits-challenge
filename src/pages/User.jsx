@@ -41,6 +41,8 @@ function User() {
 
   return (
     <div className="user">
+      <br />
+      <h2>Movement Simulator</h2>
       <form method="get" class="promotion-form">
         <div className="form-row">
           <label htmlFor="latitude">Latitude</label>
@@ -66,6 +68,8 @@ function User() {
           setUserLocation={setUserLocation}
         />
       </div>
+      <br /><br />
+      <h2>List of Offers</h2>
       {offers?.map((offer, index) => (
         <div key={index} className="offer">
           <img src={offer.imgSrc} alt="promotional offer" width="370px" />
