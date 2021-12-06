@@ -1,14 +1,19 @@
 # Flybits Challenge
 This app allows marketers to create offers for users and for user to view these offers.
 
+## Summary Video
+![Summary Video](./screenshots/imageOfYoutubeVideo.png)
+Watch the summary video [here](https://youtu.be/b4K0Is27qF0)
+
 ## Screenshots
-### Separate Interfaces for Marketers & for Users
-
 ### Marketer UI
+![Marketer UI](./screenshots/marketerUi.png)
 
-### Add New Offer
+### Add New Promotion/Offer
+![Add New Promotion](./screenshots/addANewPromotion.png)
 
 ### User Sees Relevant Offers Based On Location
+![Marketer UI](./screenshots/userUi.png)
 
 ## Setup
 1. git clone this repo to your system
