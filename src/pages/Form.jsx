@@ -1,8 +1,11 @@
 import React, { useRef } from 'react'
 import './Form.scss'
 import { addOffer } from '../firebase/db'
+import { useNavigate } from 'react-router';
 
 export default function Form() {
+  const navigate = useNavigate();
+
   const bankRef = useRef();
   const addressRef = useRef();
   const latRef = useRef();
@@ -16,9 +19,9 @@ export default function Form() {
     const data = {
       bank: bankRef.current.value,
       address: addressRef.current.value,
-      lat: Number(latRef.current.value),
-      lng: Number(lngRef.current.value),
-      radius: Number(radiusRef.current.value),
+      lat: parseFloat(latRef.current.value),
+      lng: parseFloat(lngRef.current.value),
+      radius: parseFloat(radiusRef.current.value),
       imgSrc: imgSrcRef.current.value,
       caption: captionRef.current.value
     }
@@ -32,6 +35,8 @@ export default function Form() {
     radiusRef.current.value = "";
     imgSrcRef.current.value = "";
     captionRef.current.value = "";
+
+    navigate("/marketer");
   }
 
   return (
