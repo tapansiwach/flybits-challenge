@@ -3,6 +3,7 @@ import './App.css';
 import Marketer from './pages/Marketer';
 import User from './pages/User';
 import Form from './pages/Form';
+import './firebase/init';
 
 function App() {
   return (
