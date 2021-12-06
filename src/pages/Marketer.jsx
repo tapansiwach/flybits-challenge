@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import './Marketer.scss'
 import { MarketerMap } from '../components/Map';
-// import * as branchData from "../data/branches.json";
 import { getOffers } from '../firebase/db';
+import { useNavigate } from 'react-router-dom';
 
 function Marketer() {
   const [offers, setOffers] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadData = async () => {
@@ -36,6 +37,11 @@ function Marketer() {
             mapElement={<div style={{ height: "100%" }} />}
           />
         </div>
+        <h3
+          onClick={e => navigate("/promotions/new")}
+        >
+          Add a new promotion
+        </h3>
       </div>
     </div>
   )
