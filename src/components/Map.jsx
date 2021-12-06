@@ -20,9 +20,9 @@ function MarketerGoogleMap() {
         console.log(`lng`, e.latLng.lng());
       }}
     >
-      {branchData.branches.map((branch) => (
+      {branchData.branches.map((branch, index) => (
         <Marker
-          key={branch.branchAddress}
+          key={index}
           position={{ lat: branch.lat, lng: branch.lng }}
           onClick={() => setSelectedBranch(branch)}
         />
@@ -36,8 +36,9 @@ function MarketerGoogleMap() {
           <div>Branch Info</div>
         </InfoWindow>
       )}
-      {branchData.branches.map((branch) => (
+      {branchData.branches.map((branch, index) => (
         <Circle
+          key={index}
           defaultCenter={{ lat: branch.lat, lng: branch.lng }}
           radius={branch.circle.radius}
           options={branch.circle.options}

@@ -8,8 +8,8 @@ function Marketer() {
     <div className="marketer">
       <div className="marketer__sidenav">
         <ul>
-          {branchData.branches.map((branch) => (
-            <li>
+          {branchData.branches.map((branch, index) => (
+            <li key={index}>
               <p>{branch.bank}</p>
               <p>{branch.branchAddress}</p>
             </li>
