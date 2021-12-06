@@ -7,11 +7,9 @@ import {
   InfoWindow,
   Circle,
 } from 'react-google-maps';
-// import * as branchData from "../data/branches.json";
 import { getOffers } from '../firebase/db';
 
 function MarketerGoogleMap() {
-  // const [selectedBranch, setSelectedBranch] = useState(null);
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
@@ -37,18 +35,9 @@ function MarketerGoogleMap() {
         <Marker
           key={index}
           position={{ lat: offer.lat, lng: offer.lng }}
-        // onClick={() => setSelectedBranch(branch)}
+          onClick={() => { }}
         />
       ))}
-      {/* {selectedBranch && (
-        <InfoWindow
-          zIndex={1}
-          position={{ lat: selectedBranch.lat, lng: selectedBranch.lng }}
-          onCloseClick={() => setSelectedBranch(null)}
-        >
-          <div>Branch Info</div>
-        </InfoWindow>
-      )} */}
       {offers?.map((offer, index) => (
         <Circle
           key={index}

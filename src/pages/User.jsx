@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './User.scss'
-// import * as branchData from "../data/branches.json";
 import { getOffers } from '../firebase/db';
 import { UserMap } from '../components/Map';
 import proximate from '../helpers/proximate';
