@@ -2,8 +2,8 @@
 This app allows marketers to create offers for users and for user to view these offers.
 
 ## Summary Video
+### Watch the summary video [here](https://youtu.be/b4K0Is27qF0)
 ![Summary Video](./screenshots/imageOfYoutubeVideo.png)
-Watch the summary video [here](https://youtu.be/b4K0Is27qF0)
 
 ## Screenshots
 ### Marketer UI
