@@ -20,7 +20,7 @@ This app allows marketers to create offers for users and for user to view these 
 1. [create an api key](https://developers.google.com/maps/documentation/javascript/get-api-key) for google maps.
 1. copy the maps api key into your local .env file (use the template in .env.example file)
 1. setup a project in your firebase console, and register a web app.
-1. setup firebase firestore and storage in the firebase console. 
+1. setup firebase firestore in the firebase console. 
 1. copy the firebase config of your project into your local .env file (use the template in .env.example file)
 1. npm install -g firebase-tools && firebase login if using firebase for the first time on your system.
 1. sample data in /sample_data/offers.js can be used while creating new offers
@@ -35,4 +35,4 @@ Styling and layout was done with [node-sass](https://github.com/sass/node-sass).
 
 [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/overview) was used for map functionality.
 
-[Firebase](https://firebase.google.com/) was used for storing files/images, data/documents and for user authentication. 
+[Firebase](https://firebase.google.com/) was used for storing documents. 
